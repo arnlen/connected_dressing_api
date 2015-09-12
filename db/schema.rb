@@ -11,29 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150912222446) do
+ActiveRecord::Schema.define(version: 20150912225447) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "cloth_categories", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "cloths", force: :cascade do |t|
     t.string   "name"
     t.string   "main_color"
-    t.integer  "cloth_category_id"
     t.boolean  "available_in_dressing"
     t.string   "edison_id"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
     t.integer  "dressing_id"
+    t.string   "gender"
+    t.string   "category"
   end
-
-  add_index "cloths", ["cloth_category_id"], name: "index_cloths_on_cloth_category_id", using: :btree
 
   create_table "dresses", force: :cascade do |t|
     t.text     "cloth_ids",               array: true
@@ -53,5 +46,4 @@ ActiveRecord::Schema.define(version: 20150912222446) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "cloths", "cloth_categories"
 end

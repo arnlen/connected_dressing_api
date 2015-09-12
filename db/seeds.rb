@@ -6,23 +6,52 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-ClothCategory.create name: "tshirt"
-ClothCategory.create name: "pull"
-ClothCategory.create name: "jacket"
-ClothCategory.create name: "trousers"
-
 Dressing.create! name: "main"
 
 Cloth.create(name: "test tshirt",
             main_color: "red",
-            cloth_category_id: ClothCategory.where(name: 'tshirt').first.id,
             available_in_dressing: true,
             edison_id: "tshirt01",
-            dressing_id: Dressing.first.id)
+            dressing_id: Dressing.first.id,
+            gender: "male",
+            category: "top")
+
+Cloth.create(name: "test trousers",
+            main_color: "blue",
+            available_in_dressing: true,
+            edison_id: "trousers01",
+            dressing_id: Dressing.first.id,
+            gender: "male",
+            category: "bottom")
 
 Cloth.create(name: "test jacket",
-            main_color: "red",
-            cloth_category_id: ClothCategory.where(name: 'jacket').first.id,
+            main_color: "black",
             available_in_dressing: true,
             edison_id: "jacket01",
-            dressing_id: Dressing.first.id)
+            dressing_id: Dressing.first.id,
+            gender: "male",
+            category: "hover")
+
+Cloth.create(name: "test tshirt 2",
+            main_color: "purple",
+            available_in_dressing: true,
+            edison_id: "tshirt02",
+            dressing_id: Dressing.first.id,
+            gender: "male",
+            category: "top")
+
+Cloth.create(name: "test trousers 2",
+            main_color: "blue",
+            available_in_dressing: true,
+            edison_id: "trousers02",
+            dressing_id: Dressing.first.id,
+            gender: "male",
+            category: "bottom")
+
+Cloth.create(name: "test jacket 2",
+            main_color: "orange",
+            available_in_dressing: true,
+            edison_id: "jacket02",
+            dressing_id: Dressing.first.id,
+            gender: "male",
+            category: "hover")

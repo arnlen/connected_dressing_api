@@ -7,10 +7,12 @@
 #  main_color            :string
 #  cloth_category_id     :integer
 #  available_in_dressing :boolean
-#  edison_id             :integer
+#  edison_id             :string
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null
 #  dressing_id           :integer
+#  gender                :string
+#  category              :string
 #
 
 require 'rails_helper'
