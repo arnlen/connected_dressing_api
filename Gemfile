@@ -30,3 +30,6 @@ end
 group :development do
   gem 'spring-commands-rspec', '~> 1.0'
 end
+
+# CORS handle
+gem 'rack-cors', :require => 'rack/cors'
