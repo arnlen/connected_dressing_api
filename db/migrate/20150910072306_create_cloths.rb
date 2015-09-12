@@ -4,6 +4,8 @@ class CreateCloths < ActiveRecord::Migration
       t.string :name
       t.string :main_color
       t.references :cloth_category, index: true
+      t.boolean :available_in_dressing
+      t.integer :edison_id
 
       t.timestamps null: false
     end

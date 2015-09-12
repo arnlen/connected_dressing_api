@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+ClothCategory.create name: "tshirt"
+ClothCategory.create name: "pull"
+ClothCategory.create name: "jacket"
+ClothCategory.create name: "trousers"
+
+Cloth.create(name: "test tshirt",
+            main_color: "red",
+            cloth_category_id: ClothCategory.where(name: 'tshirt'),
+            available_in_dressing: true,
+            edison_id: "tshirt01")

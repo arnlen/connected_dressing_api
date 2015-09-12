@@ -2,7 +2,7 @@ class CreateDressingContents < ActiveRecord::Migration
   def change
     create_table :dressing_contents do |t|
       t.references :dressing, index: true
-      t.array :cloth_ids
+      t.text :cloth_ids, array: true
 
       t.timestamps null: false
     end
