@@ -9,5 +9,5 @@
 #
 
 class Dressing < ActiveRecord::Base
-  has_many :clothes
+  has_many :cloths
 end

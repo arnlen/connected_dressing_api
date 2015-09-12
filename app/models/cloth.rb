@@ -2,13 +2,15 @@
 #
 # Table name: cloths
 #
-#  id                :integer          not null, primary key
-#  name              :string
-#  dressing_id       :integer
-#  cloth_category_id :integer
-#  color_id          :integer
-#  created_at        :datetime         not null
-#  updated_at        :datetime         not null
+#  id                    :integer          not null, primary key
+#  name                  :string
+#  main_color            :string
+#  cloth_category_id     :integer
+#  available_in_dressing :boolean
+#  edison_id             :integer
+#  created_at            :datetime         not null
+#  updated_at            :datetime         not null
+#  dressing_id           :integer
 #
 
 class Cloth < ActiveRecord::Base

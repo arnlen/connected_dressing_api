@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20150912222446) do
     t.string   "main_color"
     t.integer  "cloth_category_id"
     t.boolean  "available_in_dressing"
-    t.integer  "edison_id"
+    t.string   "edison_id"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
     t.integer  "dressing_id"

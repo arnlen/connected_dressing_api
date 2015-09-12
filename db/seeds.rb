@@ -11,8 +11,18 @@ ClothCategory.create name: "pull"
 ClothCategory.create name: "jacket"
 ClothCategory.create name: "trousers"
 
+Dressing.create! name: "main"
+
 Cloth.create(name: "test tshirt",
             main_color: "red",
-            cloth_category_id: ClothCategory.where(name: 'tshirt'),
+            cloth_category_id: ClothCategory.where(name: 'tshirt').first.id,
             available_in_dressing: true,
-            edison_id: "tshirt01")
+            edison_id: "tshirt01",
+            dressing_id: Dressing.first.id)
+
+Cloth.create(name: "test jacket",
+            main_color: "red",
+            cloth_category_id: ClothCategory.where(name: 'jacket').first.id,
+            available_in_dressing: true,
+            edison_id: "jacket01",
+            dressing_id: Dressing.first.id)

@@ -13,7 +13,7 @@ class ClothesController < ApplicationController
   rescue ActiveRecord::RecordNotFound
     render json: {
       result: "error",
-      message: "Unknow edison_id #{params[:id]}"
+      message: "Unknown edison_id #{params[:id]}"
     }
   end
 

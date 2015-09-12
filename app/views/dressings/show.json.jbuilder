@@ -1,0 +1,1 @@
+json.clothes @clothes, :name, :main_color, :cloth_category_id, :available_in_dressing, :edison_id
