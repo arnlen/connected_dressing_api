@@ -13,4 +13,5 @@
 
 class Cloth < ActiveRecord::Base
   belongs_to :cloth_category
+  belongs_to :dressing
 end

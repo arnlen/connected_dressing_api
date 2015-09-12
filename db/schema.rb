@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150910175337) do
+ActiveRecord::Schema.define(version: 20150912222446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20150910175337) do
     t.integer  "edison_id"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+    t.integer  "dressing_id"
   end
 
   add_index "cloths", ["cloth_category_id"], name: "index_cloths_on_cloth_category_id", using: :btree
@@ -39,15 +40,6 @@ ActiveRecord::Schema.define(version: 20150910175337) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  create_table "dressing_contents", force: :cascade do |t|
-    t.integer  "dressing_id"
-    t.text     "cloth_ids",                array: true
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  add_index "dressing_contents", ["dressing_id"], name: "index_dressing_contents_on_dressing_id", using: :btree
 
   create_table "dressings", force: :cascade do |t|
     t.string   "name"
@@ -62,5 +54,4 @@ ActiveRecord::Schema.define(version: 20150910175337) do
   end
 
   add_foreign_key "cloths", "cloth_categories"
-  add_foreign_key "dressing_contents", "dressings"
 end
