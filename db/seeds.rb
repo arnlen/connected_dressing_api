@@ -8,23 +8,42 @@
 
 Dressing.create! name: "main"
 
-Cloth.create(name: "test tshirt",
-            main_color: "red",
+# --------------------------------------------------------
+# Male clothes
+
+Cloth.create(name: "White Shirt",
+            main_color: "white",
             available_in_dressing: true,
-            edison_id: "tshirt01",
+            edison_id: "shirt01",
             dressing_id: Dressing.first.id,
             gender: "male",
             category: "top")
 
-Cloth.create(name: "test trousers",
+Cloth.create(name: "Blue shirt",
             main_color: "blue",
+            available_in_dressing: true,
+            edison_id: "shirt02",
+            dressing_id: Dressing.first.id,
+            gender: "male",
+            category: "top")
+
+Cloth.create(name: "White trousers",
+            main_color: "white",
             available_in_dressing: true,
             edison_id: "trousers01",
             dressing_id: Dressing.first.id,
             gender: "male",
             category: "bottom")
 
-Cloth.create(name: "test jacket",
+Cloth.create(name: "Black trousers",
+            main_color: "black",
+            available_in_dressing: true,
+            edison_id: "trousers02",
+            dressing_id: Dressing.first.id,
+            gender: "male",
+            category: "bottom")
+
+Cloth.create(name: "Jacket",
             main_color: "black",
             available_in_dressing: true,
             edison_id: "jacket01",
@@ -32,26 +51,13 @@ Cloth.create(name: "test jacket",
             gender: "male",
             category: "hover")
 
-Cloth.create(name: "test tshirt 2",
-            main_color: "purple",
-            available_in_dressing: true,
-            edison_id: "tshirt02",
-            dressing_id: Dressing.first.id,
-            gender: "male",
-            category: "top")
-
-Cloth.create(name: "test trousers 2",
+Cloth.create(name: "Sweater",
             main_color: "blue",
             available_in_dressing: true,
-            edison_id: "trousers02",
-            dressing_id: Dressing.first.id,
-            gender: "male",
-            category: "bottom")
-
-Cloth.create(name: "test jacket 2",
-            main_color: "orange",
-            available_in_dressing: true,
-            edison_id: "jacket02",
+            edison_id: "sweater01",
             dressing_id: Dressing.first.id,
             gender: "male",
             category: "hover")
+
+# --------------------------------------------------------
+# Female clothes
